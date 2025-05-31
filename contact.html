@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट गाव - संपर्क</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Marathi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- हेडर सेक्शन येथे सुरु -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="मेनू उघडा">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                    <li><a href="religious.html">धार्मिक स्थळे</a></li>
+                    <li><a href="places.html">महत्त्वाची ठिकाणे</a></li>
+                    <li><a href="events.html">कार्यक्रम</a></li>
+                    <li><a href="news.html">बातम्या व सूचना</a></li>
+                    <li><a href="businesses.html">स्थानिक व्यावसायिक</a></li>
+                    <li><a href="contact.html" class="active">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- पेज शीर्षक सेक्शन येथे सुरु -->
+    <section class="page-title">
+        <div class="container">
+            <h1>संपर्क</h1>
+            <p>आमच्याशी संपर्क साधण्यासाठी खालील माहिती वापरा</p>
+        </div>
+    </section>
+
+    <!-- संपर्क माहिती सेक्शन येथे सुरु -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <div class="section-header">
+                        <div class="icon-placeholder"></div>
+                        <h2>संपर्क माहिती</h2>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-text">
+                                <h3>पत्ता</h3>
+                                <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                                <p>तालुका: चांदवड, जिल्हा: नाशिक, महाराष्ट्र</p>
+                                <p>पिन कोड: [पिन कोड]</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-text">
+                                <h3>फोन</h3>
+                                <p>कार्यालय: [कार्यालय फोन नंबर]</p>
+                                <p>सरपंच: [सरपंच फोन नंबर]</p>
+                                <p>ग्रामसेवक: [ग्रामसेवक फोन नंबर]</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-text">
+                                <h3>ईमेल</h3>
+                                <p>grampanchayat.[गावाचे नाव]@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"></div>
+                            <div class="contact-text">
+                                <h3>कार्यालयीन वेळ</h3>
+                                <p>सोमवार ते शनिवार: सकाळी १०:०० ते संध्याकाळी ५:००</p>
+                                <p>रविवार आणि सार्वजनिक सुट्टी: बंद</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="section-header">
+                        <div class="icon-placeholder"></div>
+                        <h2>नकाशा</h2>
+                    </div>
+                    <div class="map-container">
+                        <!-- नकाशा प्लेसहोल्डर - येथे Google Map एम्बेड कोड येईल -->
+                        <div class="map-placeholder">
+                            <p>येथे गावाचा नकाशा दिसेल</p>
+                            <p>Google Map एम्बेड कोड येथे जोडा</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- संपर्क फॉर्म सेक्शन येथे सुरु -->
+    <section class="contact-form">
+        <div class="container">
+            <div class="section-header">
+                <div class="icon-placeholder"></div>
+                <h2>आम्हाला संदेश पाठवा</h2>
+            </div>
+            <form id="contactForm" class="form">
+                <div class="form-group">
+                    <label for="name">नाव <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">ईमेल <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">फोन नंबर</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">विषय <span class="required">*</span></label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">संदेश <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn primary-btn">पाठवा</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- महत्वाचे दूरध्वनी क्रमांक सेक्शन येथे सुरु -->
+    <section class="important-contacts">
+        <div class="container">
+            <div class="section-header">
+                <div class="icon-placeholder"></div>
+                <h2>महत्वाचे दूरध्वनी क्रमांक</h2>
+            </div>
+            <div class="contacts-grid">
+                <div class="contact-emergency-card">
+                    <div class="emergency-icon"></div>
+                    <h3>पोलीस स्टेशन</h3>
+                    <p>१०० / [स्थानिक क्रमांक]</p>
+                </div>
+                <div class="contact-emergency-card">
+                    <div class="emergency-icon"></div>
+                    <h3>आरोग्य केंद्र</h3>
+                    <p>[स्थानिक क्रमांक]</p>
+                </div>
+                <div class="contact-emergency-card">
+                    <div class="emergency-icon"></div>
+                    <h3>अग्निशमन</h3>
+                    <p>१०१ / [स्थानिक क्रमांक]</p>
+                </div>
+                <div class="contact-emergency-card">
+                    <div class="emergency-icon"></div>
+                    <h3>रुग्णवाहिका</h3>
+                    <p>१०८ / [स्थानिक क्रमांक]</p>
+                </div>
+                <div class="contact-emergency-card">
+                    <div class="emergency-icon"></div>
+                    <h3>महिला हेल्पलाईन</h3>
+                    <p>१८१ / [स्थानिक क्रमांक]</p>
+                </div>
+                <div class="contact-emergency-card">
+                    <div class="emergency-icon"></div>
+                    <h3>तहसील कार्यालय</h3>
+                    <p>[स्थानिक क्रमांक]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- फूटर सेक्शन येथे सुरु -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h2>
+                    <p>ही वेबसाईट <span class="village-name">[गावाचे नाव]</span> ग्रामपंचायतीतर्फे विकसित</p>
+                </div>
+                <div class="footer-links">
+                    <h3>उपयुक्त दुवे</h3>
+                    <ul>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">वापराच्या अटी</a></li>
+                        <li><a href="#">नागरिक तक्रार</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>संपर्क</h3>
+                    <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                    <p>तालुका: चांदवड, जिल्हा: नाशिक</p>
+                    <p>फोन: [फोन नंबर]</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; २०२५ स्मार्ट <span class="village-name">[गावाचे नाव]</span>. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

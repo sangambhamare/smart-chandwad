@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट गाव - स्थानिक व्यावसायिक</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Marathi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- हेडर सेक्शन येथे सुरु -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="मेनू उघडा">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                    <li><a href="religious.html">धार्मिक स्थळे</a></li>
+                    <li><a href="places.html">महत्त्वाची ठिकाणे</a></li>
+                    <li><a href="events.html">कार्यक्रम</a></li>
+                    <li><a href="news.html">बातम्या व सूचना</a></li>
+                    <li><a href="businesses.html" class="active">स्थानिक व्यावसायिक</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- पेज शीर्षक सेक्शन येथे सुरु -->
+    <section class="page-title">
+        <div class="container">
+            <h1>स्थानिक व्यावसायिक</h1>
+            <p>आमच्या गावातील व्यापारी आणि व्यावसायिकांची माहिती</p>
+        </div>
+    </section>
+
+    <!-- व्यावसायिक फिल्टर सेक्शन येथे सुरु -->
+    <section class="business-filter">
+        <div class="container">
+            <div class="filter-section">
+                <h3>व्यवसाय शोधा</h3>
+                <div class="search-filter">
+                    <input type="text" id="business-search" placeholder="व्यवसायाचे नाव शोधा..." class="search-input">
+                    <div class="category-filter">
+                        <label for="business-category">प्रकार:</label>
+                        <select id="business-category" class="filter-select">
+                            <option value="all">सर्व</option>
+                            <option value="grocery">किराणा</option>
+                            <option value="agriculture">शेती सेवा</option>
+                            <option value="clothing">कापड</option>
+                            <option value="food">खाद्यपदार्थ</option>
+                            <option value="electronics">इलेक्ट्रॉनिक्स</option>
+                            <option value="services">सेवा</option>
+                            <option value="artisan">कारागीर</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- व्यावसायिक यादी सेक्शन येथे सुरु -->
+    <section class="business-list">
+        <div class="container">
+            <div class="business-grid">
+                <!-- व्यवसाय १ -->
+                <div class="business-card" data-category="grocery">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?grocery,shop" alt="किराणा दुकान" class="lazy-image" data-src="images/grocery.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>समर्थ किराणा स्टोअर्स</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> किराणा</p>
+                            <p><strong>मालक:</strong> श्री. रमेश पाटील</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> मुख्य रस्ता, गावाच्या मध्यभागी</p>
+                            <p><strong>फोन:</strong> 9876543210</p>
+                        </div>
+                        <p class="business-description">सर्व प्रकारचे किराणा सामान, धान्य, मसाले, तेल इत्यादी उत्तम दर्जाचे सामान उपलब्ध. घरपोच सेवा उपलब्ध.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी ८:०० ते रात्री ९:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय २ -->
+                <div class="business-card" data-category="agriculture">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?agriculture,shop" alt="शेती सेवा" class="lazy-image" data-src="images/agri.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>किसान शेती केंद्र</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> शेती सेवा</p>
+                            <p><strong>मालक:</strong> श्री. सुनील जाधव</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> बस स्टँड जवळ</p>
+                            <p><strong>फोन:</strong> 9876543211</p>
+                        </div>
+                        <p class="business-description">बियाणे, खते, कीटकनाशके आणि शेती उपकरणे विक्री. शेतकऱ्यांना मार्गदर्शन सेवा उपलब्ध.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी ९:०० ते संध्याकाळी ७:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय ३ -->
+                <div class="business-card" data-category="clothing">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?clothing,shop" alt="कापड दुकान" class="lazy-image" data-src="images/clothing.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>लक्ष्मी कापड भंडार</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> कापड</p>
+                            <p><strong>मालक:</strong> श्रीमती सुनीता शिंदे</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> मार्केट रोड</p>
+                            <p><strong>फोन:</strong> 9876543212</p>
+                        </div>
+                        <p class="business-description">सर्व प्रकारचे कापड, रेडीमेड कपडे, साड्या, ड्रेस मटेरियल उपलब्ध. विशेष सणासुदीच्या ऑफर्स.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी १०:०० ते रात्री ८:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय ४ -->
+                <div class="business-card" data-category="food">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?restaurant,rural" alt="हॉटेल" class="lazy-image" data-src="images/hotel.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>गावरान भोजनालय</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> खाद्यपदार्थ</p>
+                            <p><strong>मालक:</strong> श्री. प्रकाश कदम</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> बस स्टँड समोर</p>
+                            <p><strong>फोन:</strong> 9876543213</p>
+                        </div>
+                        <p class="business-description">शुद्ध आणि चविष्ट गावरान जेवण. थाळी, चपाती-भाजी, पोहे, उपवास पदार्थ उपलब्ध. विशेष: पारंपारिक पद्धतीने बनवलेले पदार्थ.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी ७:०० ते रात्री १०:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय ५ -->
+                <div class="business-card" data-category="electronics">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?electronics,shop" alt="इलेक्ट्रॉनिक्स" class="lazy-image" data-src="images/electronics.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>श्री गणेश इलेक्ट्रॉनिक्स</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> इलेक्ट्रॉनिक्स</p>
+                            <p><strong>मालक:</strong> श्री. गणेश वाघ</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> मुख्य चौक</p>
+                            <p><strong>फोन:</strong> 9876543214</p>
+                        </div>
+                        <p class="business-description">मोबाईल, टीव्ही, फ्रिज, वॉशिंग मशीन इत्यादी इलेक्ट्रॉनिक वस्तूंची विक्री आणि दुरुस्ती. मोबाईल रिचार्ज आणि बिल भरणा सेवा उपलब्ध.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी १०:०० ते रात्री ८:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय ६ -->
+                <div class="business-card" data-category="services">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?tailor,shop" alt="शिलाई" class="lazy-image" data-src="images/tailor.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>स्टाईल शिलाई केंद्र</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> सेवा</p>
+                            <p><strong>मालक:</strong> श्रीमती मंजुषा पवार</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> मार्केट रोड</p>
+                            <p><strong>फोन:</strong> 9876543215</p>
+                        </div>
+                        <p class="business-description">महिला, पुरुष आणि मुलांसाठी कपडे शिवणे, भरतकाम, फॅन्सी ब्लाऊज डिझाईन. लग्न सराईसाठी विशेष ऑर्डर स्वीकारली जाते.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी १०:०० ते संध्याकाळी ७:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय ७ -->
+                <div class="business-card" data-category="artisan">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?pottery,craft" alt="कुंभार" class="lazy-image" data-src="images/pottery.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>कलाकृती मातीकाम</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> कारागीर</p>
+                            <p><strong>मालक:</strong> श्री. रामू कुंभार</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> गावाच्या पूर्व बाजूला</p>
+                            <p><strong>फोन:</strong> 9876543216</p>
+                        </div>
+                        <p class="business-description">पारंपारिक मातीची भांडी, सजावटीच्या वस्तू, गणपती मूर्ती, दिवे इत्यादी हस्तकलेच्या वस्तू. विशेष ऑर्डर स्वीकारली जाते.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी ९:०० ते संध्याकाळी ६:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- व्यवसाय ८ -->
+                <div class="business-card" data-category="agriculture">
+                    <div class="business-image">
+                        <img src="https://source.unsplash.com/500x300/?dairy,farm" alt="दूध केंद्र" class="lazy-image" data-src="images/dairy.jpg">
+                    </div>
+                    <div class="business-content">
+                        <h3>गावकरी दूध केंद्र</h3>
+                        <div class="business-meta">
+                            <p><strong>प्रकार:</strong> शेती सेवा</p>
+                            <p><strong>मालक:</strong> श्री. विजय गायकवाड</p>
+                        </div>
+                        <div class="business-contact">
+                            <p><strong>पत्ता:</strong> गावाच्या पश्चिम बाजूला</p>
+                            <p><strong>फोन:</strong> 9876543217</p>
+                        </div>
+                        <p class="business-description">शुद्ध गाय आणि म्हैस दूध, दही, ताक, लोणी, तूप इत्यादी दुग्धजन्य पदार्थ. घरपोच सेवा उपलब्ध.</p>
+                        <div class="business-timing">
+                            <p><strong>वेळ:</strong> सकाळी ६:०० ते १०:०० आणि संध्याकाळी ५:०० ते ८:००</p>
+                        </div>
+                        <div class="business-map">
+                            <a href="#" class="map-link">नकाशावर पहा</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- नवीन व्यवसाय नोंदणी सेक्शन येथे सुरु -->
+    <section class="business-register">
+        <div class="container">
+            <div class="section-header">
+                <div class="icon-placeholder"></div>
+                <h2>आपला व्यवसाय नोंदवा</h2>
+            </div>
+            <p class="register-info">आपला व्यवसाय या वेबसाईटवर नोंदवण्यासाठी ग्रामपंचायत कार्यालयात संपर्क साधावा किंवा खालील फॉर्म भरा.</p>
+            <a href="contact.html" class="btn primary-btn">संपर्क करा</a>
+        </div>
+    </section>
+
+    <!-- फूटर सेक्शन येथे सुरु -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h2>
+                    <p>ही वेबसाईट <span class="village-name">[गावाचे नाव]</span> ग्रामपंचायतीतर्फे विकसित</p>
+                </div>
+                <div class="footer-links">
+                    <h3>उपयुक्त दुवे</h3>
+                    <ul>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">वापराच्या अटी</a></li>
+                        <li><a href="#">नागरिक तक्रार</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>संपर्क</h3>
+                    <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                    <p>तालुका: चांदवड, जिल्हा: नाशिक</p>
+                    <p>फोन: [फोन नंबर]</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; २०२५ स्मार्ट <span class="village-name">[गावाचे नाव]</span>. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

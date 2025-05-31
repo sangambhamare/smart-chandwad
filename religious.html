@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट गाव - धार्मिक स्थळे</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Marathi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- हेडर सेक्शन येथे सुरु -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="मेनू उघडा">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                    <li><a href="religious.html" class="active">धार्मिक स्थळे</a></li>
+                    <li><a href="places.html">महत्त्वाची ठिकाणे</a></li>
+                    <li><a href="events.html">कार्यक्रम</a></li>
+                    <li><a href="news.html">बातम्या व सूचना</a></li>
+                    <li><a href="businesses.html">स्थानिक व्यावसायिक</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- पेज शीर्षक सेक्शन येथे सुरु -->
+    <section class="page-title">
+        <div class="container">
+            <h1>धार्मिक स्थळे</h1>
+            <p>आमच्या गावातील प्रसिद्ध धार्मिक स्थळांची माहिती</p>
+        </div>
+    </section>
+
+    <!-- धार्मिक स्थळे सेक्शन येथे सुरु -->
+    <section class="religious-places">
+        <div class="container">
+            <div class="places-grid">
+                <!-- धार्मिक स्थळ १ -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?temple" alt="मंदिर" class="lazy-image" data-src="images/temple1.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>श्री गणेश मंदिर</h3>
+                        <div class="place-details">
+                            <p><strong>दर्शन वेळ:</strong> सकाळी ६:०० ते रात्री ९:००</p>
+                            <p><strong>स्थान:</strong> गावाच्या मध्यभागी</p>
+                        </div>
+                        <p class="place-description">हे गावातील सर्वात जुने आणि प्रसिद्ध मंदिर आहे. येथे दररोज सकाळी आरती आणि संध्याकाळी पूजा होते. गणेश चतुर्थी उत्सव मोठ्या उत्साहात साजरा केला जातो.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="temple1-more">अधिक माहिती</button>
+                        <div class="more-info" id="temple1-more">
+                            <p>या मंदिराची स्थापना सुमारे १५० वर्षांपूर्वी झाली. मंदिरातील मूर्ती पंचधातूची आहे. दरवर्षी गणेश चतुर्थीला विशेष कार्यक्रम आयोजित केले जातात. मंदिराच्या परिसरात एक छोटे सभागृह आहे जेथे धार्मिक कार्यक्रम होतात.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- धार्मिक स्थळ २ -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?hindu-temple" alt="मंदिर" class="lazy-image" data-src="images/temple2.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>श्री मारुती मंदिर</h3>
+                        <div class="place-details">
+                            <p><strong>दर्शन वेळ:</strong> सकाळी ५:०० ते रात्री ८:००</p>
+                            <p><strong>स्थान:</strong> गावाच्या पूर्व बाजूला</p>
+                        </div>
+                        <p class="place-description">हे मंदिर गावातील शेतकऱ्यांचे आराध्य दैवत आहे. दर शनिवारी विशेष पूजा होते. हनुमान जयंती उत्सवात मोठी यात्रा भरते.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="temple2-more">अधिक माहिती</button>
+                        <div class="more-info" id="temple2-more">
+                            <p>या मंदिराची स्थापना गावाच्या संरक्षणासाठी केली गेली होती. मंदिराच्या आवारात एक प्राचीन वटवृक्ष आहे. दरवर्षी हनुमान जयंतीला मोठा उत्सव साजरा केला जातो. मंदिराच्या व्यवस्थापनासाठी एक स्वतंत्र समिती आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- धार्मिक स्थळ ३ -->
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?indian-temple" alt="मंदिर" class="lazy-image" data-src="images/temple3.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>श्री दुर्गा देवी मंदिर</h3>
+                        <div class="place-details">
+                            <p><strong>दर्शन वेळ:</strong> सकाळी ६:०० ते संध्याकाळी ७:००</p>
+                            <p><strong>स्थान:</strong> गावाच्या उत्तर बाजूला</p>
+                        </div>
+                        <p class="place-description">हे मंदिर गावाच्या कुलदैवताचे आहे. नवरात्रीच्या काळात येथे विशेष पूजा आणि कार्यक्रम होतात. मंदिराच्या परिसरात एक सुंदर बाग आहे.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="temple3-more">अधिक माहिती</button>
+                        <div class="more-info" id="temple3-more">
+                            <p>या मंदिराची स्थापना गावाच्या संस्थापकांनी केली होती. मंदिरात असलेली दुर्गा देवीची मूर्ती संगमरवरी आहे. नवरात्रीच्या नऊ दिवसांत विशेष पूजा आणि भजन कार्यक्रम होतात. मंदिराच्या परिसरात एक प्राचीन विहीर आहे जिचे पाणी औषधी मानले जाते.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- फूटर सेक्शन येथे सुरु -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h2>
+                    <p>ही वेबसाईट <span class="village-name">[गावाचे नाव]</span> ग्रामपंचायतीतर्फे विकसित</p>
+                </div>
+                <div class="footer-links">
+                    <h3>उपयुक्त दुवे</h3>
+                    <ul>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">वापराच्या अटी</a></li>
+                        <li><a href="#">नागरिक तक्रार</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>संपर्क</h3>
+                    <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                    <p>तालुका: चांदवड, जिल्हा: नाशिक</p>
+                    <p>फोन: [फोन नंबर]</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; २०२५ स्मार्ट <span class="village-name">[गावाचे नाव]</span>. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

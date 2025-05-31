@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट गाव - महत्त्वाची ठिकाणे</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Marathi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- हेडर सेक्शन येथे सुरु -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="मेनू उघडा">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                    <li><a href="religious.html">धार्मिक स्थळे</a></li>
+                    <li><a href="places.html" class="active">महत्त्वाची ठिकाणे</a></li>
+                    <li><a href="events.html">कार्यक्रम</a></li>
+                    <li><a href="news.html">बातम्या व सूचना</a></li>
+                    <li><a href="businesses.html">स्थानिक व्यावसायिक</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- पेज शीर्षक सेक्शन येथे सुरु -->
+    <section class="page-title">
+        <div class="container">
+            <h1>महत्त्वाची ठिकाणे</h1>
+            <p>आमच्या गावातील प्रसिद्ध आणि ऐतिहासिक स्थळांची माहिती</p>
+        </div>
+    </section>
+
+    <!-- महत्त्वाची ठिकाणे सेक्शन येथे सुरु -->
+    <section class="important-places">
+        <div class="container">
+            <!-- फिल्टर सेक्शन -->
+            <div class="filter-section">
+                <h3>फिल्टर करा</h3>
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">सर्व</button>
+                    <button class="filter-btn" data-filter="historical">ऐतिहासिक</button>
+                    <button class="filter-btn" data-filter="natural">नैसर्गिक</button>
+                    <button class="filter-btn" data-filter="community">सामुदायिक</button>
+                </div>
+            </div>
+
+            <div class="places-grid">
+                <!-- ऐतिहासिक स्थळ १ -->
+                <div class="place-card" data-category="historical">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?historical,fort" alt="किल्ला" class="lazy-image" data-src="images/fort.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>प्राचीन किल्ला</h3>
+                        <div class="place-details">
+                            <p><strong>भेटीची वेळ:</strong> सकाळी ८:०० ते संध्याकाळी ६:००</p>
+                            <p><strong>स्थान:</strong> गावापासून २ किमी अंतरावर</p>
+                        </div>
+                        <p class="place-description">हा किल्ला १७व्या शतकातील आहे आणि मराठा साम्राज्याच्या काळातील महत्त्वाचे रक्षण केंद्र होते. किल्ल्यावरून संपूर्ण परिसराचे सुंदर दृश्य दिसते.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="fort-more">अधिक माहिती</button>
+                        <div class="more-info" id="fort-more">
+                            <p>या किल्ल्याची बांधणी मराठा साम्राज्याच्या काळात झाली. किल्ल्यावर प्राचीन तोफा, पाण्याची टाकी आणि एक छोटे मंदिर आहे. किल्ल्याच्या तटबंदी अजूनही चांगल्या स्थितीत आहेत. दरवर्षी येथे ऐतिहासिक महोत्सव साजरा केला जातो.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- नैसर्गिक स्थळ १ -->
+                <div class="place-card" data-category="natural">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?waterfall" alt="धबधबा" class="lazy-image" data-src="images/waterfall.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>सुंदर धबधबा</h3>
+                        <div class="place-details">
+                            <p><strong>भेटीची वेळ:</strong> सकाळी ९:०० ते संध्याकाळी ५:००</p>
+                            <p><strong>स्थान:</strong> गावापासून ५ किमी अंतरावर</p>
+                        </div>
+                        <p class="place-description">हा धबधबा पावसाळ्यात अतिशय सुंदर दिसतो. येथे पिकनिकसाठी चांगली जागा आहे. पाण्याचा प्रवाह वर्षभर असतो, परंतु पावसाळ्यात तो अधिक भव्य असतो.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="waterfall-more">अधिक माहिती</button>
+                        <div class="more-info" id="waterfall-more">
+                            <p>या धबधब्याची उंची सुमारे ३० फूट आहे. धबधब्याच्या खाली एक नैसर्गिक तलाव आहे जेथे पोहण्याची परवानगी नाही. परिसरात अनेक दुर्मिळ वनस्पती आणि पक्षी आढळतात. पर्यटकांसाठी विश्रामगृह आणि छोटे उपहारगृह आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- सामुदायिक स्थळ १ -->
+                <div class="place-card" data-category="community">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?community,hall" alt="सभागृह" class="lazy-image" data-src="images/hall.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>ग्रामीण सभागृह</h3>
+                        <div class="place-details">
+                            <p><strong>वेळ:</strong> सकाळी १०:०० ते रात्री ८:००</p>
+                            <p><strong>स्थान:</strong> गावाच्या मध्यभागी</p>
+                        </div>
+                        <p class="place-description">हे सभागृह गावातील सर्व सामाजिक कार्यक्रमांसाठी वापरले जाते. येथे लग्न समारंभ, सार्वजनिक कार्यक्रम आणि ग्रामसभा होतात.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="hall-more">अधिक माहिती</button>
+                        <div class="more-info" id="hall-more">
+                            <p>या सभागृहाची निर्मिती २०१० साली झाली. येथे ५०० लोकांच्या बसण्याची व्यवस्था आहे. सभागृहात आधुनिक ध्वनी यंत्रणा, प्रोजेक्टर आणि वातानुकूलित व्यवस्था आहे. सभागृह आरक्षणासाठी ग्रामपंचायत कार्यालयाशी संपर्क साधावा.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ऐतिहासिक स्थळ २ -->
+                <div class="place-card" data-category="historical">
+                    <div class="place-image">
+                        <img src="https://source.unsplash.com/500x300/?ancient,well" alt="विहीर" class="lazy-image" data-src="images/well.jpg">
+                    </div>
+                    <div class="place-content">
+                        <h3>प्राचीन बावडी</h3>
+                        <div class="place-details">
+                            <p><strong>भेटीची वेळ:</strong> कधीही</p>
+                            <p><strong>स्थान:</strong> गावाच्या दक्षिण बाजूला</p>
+                        </div>
+                        <p class="place-description">ही बावडी सुमारे २०० वर्षे जुनी आहे. याचे पाणी औषधी मानले जाते. बावडीवर सुंदर कोरीव काम केलेले आहे.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="well-more">अधिक माहिती</button>
+                        <div class="more-info" id="well-more">
+                            <p>या बावडीची निर्मिती स्थानिक राजाने केली होती. बावडीच्या भिंतींवर अनेक पौराणिक कथांचे चित्रण आहे. पाण्याचा स्त्रोत वर्षभर कायम असतो. बावडीच्या परिसरात एक छोटे उद्यान विकसित करण्यात आले आहे.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- फूटर सेक्शन येथे सुरु -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h2>
+                    <p>ही वेबसाईट <span class="village-name">[गावाचे नाव]</span> ग्रामपंचायतीतर्फे विकसित</p>
+                </div>
+                <div class="footer-links">
+                    <h3>उपयुक्त दुवे</h3>
+                    <ul>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">वापराच्या अटी</a></li>
+                        <li><a href="#">नागरिक तक्रार</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>संपर्क</h3>
+                    <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                    <p>तालुका: चांदवड, जिल्हा: नाशिक</p>
+                    <p>फोन: [फोन नंबर]</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; २०२५ स्मार्ट <span class="village-name">[गावाचे नाव]</span>. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

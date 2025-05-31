@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट गाव - बातम्या व सूचना</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Marathi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- हेडर सेक्शन येथे सुरु -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="मेनू उघडा">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                    <li><a href="religious.html">धार्मिक स्थळे</a></li>
+                    <li><a href="places.html">महत्त्वाची ठिकाणे</a></li>
+                    <li><a href="events.html">कार्यक्रम</a></li>
+                    <li><a href="news.html" class="active">बातम्या व सूचना</a></li>
+                    <li><a href="businesses.html">स्थानिक व्यावसायिक</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- पेज शीर्षक सेक्शन येथे सुरु -->
+    <section class="page-title">
+        <div class="container">
+            <h1>बातम्या व सूचना</h1>
+            <p>गावातील ताज्या घडामोडी आणि महत्त्वाच्या सूचना</p>
+        </div>
+    </section>
+
+    <!-- बातम्या फिल्टर सेक्शन येथे सुरु -->
+    <section class="news-filter">
+        <div class="container">
+            <div class="filter-section">
+                <h3>बातम्या शोधा</h3>
+                <div class="search-filter">
+                    <input type="text" id="news-search" placeholder="बातमी शोधा..." class="search-input">
+                    <div class="category-filter">
+                        <label for="news-category">प्रकार:</label>
+                        <select id="news-category" class="filter-select">
+                            <option value="all">सर्व</option>
+                            <option value="announcement">घोषणा</option>
+                            <option value="development">विकास</option>
+                            <option value="education">शिक्षण</option>
+                            <option value="health">आरोग्य</option>
+                            <option value="agriculture">शेती</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- बातम्या सेक्शन येथे सुरु -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- बातमी १ -->
+                <div class="news-tile" data-category="development">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/500x300/?village,development" alt="विकास कामे" class="lazy-image" data-src="images/development.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">१५ मे, २०२५</div>
+                        <h3>गावात नवीन पाणी पुरवठा योजना सुरू</h3>
+                        <p>गावातील पाणी पुरवठा सुधारण्यासाठी नवीन योजना कार्यान्वित करण्यात आली आहे. या योजनेमुळे दररोज ८ तास पाणी पुरवठा होईल.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="news1-more">अधिक वाचा</button>
+                        <div class="more-info" id="news1-more">
+                            <p>या योजनेसाठी राज्य सरकारने ५० लाख रुपयांचा निधी मंजूर केला आहे. योजनेंतर्गत नवीन पाणी साठवण टाकी, पाईपलाईन आणि पंप बसवण्यात आले आहेत. या योजनेमुळे गावातील १००० कुटुंबांना नियमित पाणी पुरवठा होईल. योजनेचे उद्घाटन जिल्हाधिकाऱ्यांच्या हस्ते करण्यात आले.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- बातमी २ -->
+                <div class="news-tile" data-category="announcement">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/500x300/?meeting,village" alt="ग्रामसभा" class="lazy-image" data-src="images/meeting.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">१० मे, २०२५</div>
+                        <h3>ग्रामसभेची बैठक २० मे रोजी</h3>
+                        <p>सर्व ग्रामस्थांना कळविण्यात येते की, येत्या २० मे रोजी सकाळी १० वाजता ग्रामसभेची बैठक ग्रामपंचायत कार्यालयात आयोजित करण्यात आली आहे.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="news2-more">अधिक वाचा</button>
+                        <div class="more-info" id="news2-more">
+                            <p>या बैठकीत पुढील विषयांवर चर्चा होईल: १) गावातील विकास कामांचा आढावा, २) स्वच्छता अभियान, ३) पाणी पुरवठा योजना, ४) शेतकरी प्रशिक्षण कार्यक्रम, ५) ग्रामपंचायत निवडणूक तयारी. सर्व ग्रामस्थांनी वेळेवर उपस्थित राहावे. बैठकीनंतर दुपारचे भोजन आयोजित करण्यात आले आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- बातमी ३ -->
+                <div class="news-tile" data-category="education">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/500x300/?school,rural" alt="शाळा" class="lazy-image" data-src="images/school.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">५ मे, २०२५</div>
+                        <h3>गावातील शाळेला डिजिटल वर्ग मिळाला</h3>
+                        <p>गावातील प्राथमिक शाळेला डिजिटल वर्ग मिळाला आहे. या वर्गात प्रोजेक्टर, कॉम्प्युटर आणि इंटरनेट सुविधा उपलब्ध करून देण्यात आली आहे.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="news3-more">अधिक वाचा</button>
+                        <div class="more-info" id="news3-more">
+                            <p>या डिजिटल वर्गासाठी स्थानिक उद्योजकाने आर्थिक मदत केली आहे. विद्यार्थ्यांना आधुनिक शिक्षण पद्धतीचा लाभ मिळावा यासाठी ही सुविधा उपलब्ध करून देण्यात आली आहे. शिक्षकांना डिजिटल साधनांचे प्रशिक्षण देण्यात आले आहे. या उपक्रमामुळे विद्यार्थ्यांचा अभ्यासात रस वाढला आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- बातमी ४ -->
+                <div class="news-tile" data-category="health">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/500x300/?medical,camp" alt="आरोग्य शिबिर" class="lazy-image" data-src="images/health.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">१ मे, २०२५</div>
+                        <h3>आरोग्य तपासणी शिबिर यशस्वी</h3>
+                        <p>गावात आयोजित केलेल्या आरोग्य तपासणी शिबिरात ३०० ग्रामस्थांनी सहभाग घेतला. या शिबिरात रक्तदाब, मधुमेह आणि नेत्र तपासणी करण्यात आली.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="news4-more">अधिक वाचा</button>
+                        <div class="more-info" id="news4-more">
+                            <p>या शिबिरात जिल्हा रुग्णालयातील डॉक्टरांनी सेवा दिली. शिबिरात २० जणांना मधुमेह आणि ३० जणांना उच्च रक्तदाबाचे निदान झाले. त्यांना पुढील उपचारांसाठी मार्गदर्शन करण्यात आले. गरजू रुग्णांना मोफत औषधे देण्यात आली. आरोग्य विभागाने असे शिबिर दर तीन महिन्यांनी आयोजित करण्याचे ठरवले आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- बातमी ५ -->
+                <div class="news-tile" data-category="agriculture">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/500x300/?farming,training" alt="शेती प्रशिक्षण" class="lazy-image" data-src="images/farming.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">२५ एप्रिल, २०२५</div>
+                        <h3>शेतकरी प्रशिक्षण कार्यक्रम</h3>
+                        <p>गावातील शेतकऱ्यांसाठी आधुनिक शेती तंत्रज्ञानावर प्रशिक्षण कार्यक्रम आयोजित करण्यात येत आहे. सहभागी होण्यासाठी ग्रामपंचायत कार्यालयात नोंदणी करा.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="news5-more">अधिक वाचा</button>
+                        <div class="more-info" id="news5-more">
+                            <p>हा प्रशिक्षण कार्यक्रम कृषी विभागाच्या सहकार्याने आयोजित करण्यात येत आहे. प्रशिक्षणात ठिबक सिंचन, सेंद्रिय शेती, फळबाग लागवड आणि कीटकनाशकांचा योग्य वापर या विषयांवर मार्गदर्शन केले जाईल. प्रशिक्षणासाठी नोंदणी शुल्क १०० रुपये आहे. सहभागींना प्रशिक्षण साहित्य आणि प्रमाणपत्र दिले जाईल.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- बातमी ६ -->
+                <div class="news-tile" data-category="development">
+                    <div class="news-image">
+                        <img src="https://source.unsplash.com/500x300/?solar,panel" alt="सौर ऊर्जा" class="lazy-image" data-src="images/solar.jpg">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">२० एप्रिल, २०२५</div>
+                        <h3>गावात सौर ऊर्जा प्रकल्प सुरू</h3>
+                        <p>गावातील रस्त्यांवर सौर दिवे बसवण्याचा प्रकल्प सुरू झाला आहे. या प्रकल्पामुळे वीज बचत होईल आणि रस्ते अधिक सुरक्षित होतील.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="news6-more">अधिक वाचा</button>
+                        <div class="more-info" id="news6-more">
+                            <p>या प्रकल्पासाठी जिल्हा परिषदेने २० लाख रुपयांचा निधी मंजूर केला आहे. प्रकल्पांतर्गत गावातील सर्व मुख्य रस्त्यांवर ५० सौर दिवे बसवण्यात येतील. या दिव्यांची देखभाल ग्रामपंचायत करेल. प्रकल्प पुढील महिन्यात पूर्ण होणे अपेक्षित आहे. यामुळे गावातील वीज खर्च कमी होईल आणि पर्यावरण संरक्षणास मदत होईल.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- महत्वाच्या सूचना सेक्शन येथे सुरु -->
+    <section class="notices-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="icon-placeholder"></div>
+                <h2>महत्वाच्या सूचना</h2>
+            </div>
+            <div class="notice-board">
+                <div class="notice">
+                    <div class="notice-icon"></div>
+                    <div class="notice-content">
+                        <h3>पाणी पुरवठा खंडित</h3>
+                        <p>दिनांक १८ मे रोजी दुरुस्ती कामांमुळे सकाळी १० ते दुपारी २ या वेळेत पाणी पुरवठा खंडित राहील.</p>
+                    </div>
+                </div>
+                <div class="notice">
+                    <div class="notice-icon"></div>
+                    <div class="notice-content">
+                        <h3>आधार नोंदणी शिबिर</h3>
+                        <p>दिनांक २५ मे रोजी ग्रामपंचायत कार्यालयात आधार नोंदणी व दुरुस्ती शिबिर आयोजित करण्यात आले आहे.</p>
+                    </div>
+                </div>
+                <div class="notice">
+                    <div class="notice-icon"></div>
+                    <div class="notice-content">
+                        <h3>कर भरणा सूचना</h3>
+                        <p>सर्व ग्रामस्थांना कळविण्यात येते की, घरपट्टी कर ३० जून पूर्वी भरल्यास १०% सूट मिळेल.</p>
+                    </div>
+                </div>
+                <div class="notice">
+                    <div class="notice-icon"></div>
+                    <div class="notice-content">
+                        <h3>स्वच्छता अभियान</h3>
+                        <p>दिनांक ५ जून रोजी गावात स्वच्छता अभियान राबवण्यात येईल. सर्व नागरिकांनी सहभागी व्हावे.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- फूटर सेक्शन येथे सुरु -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h2>
+                    <p>ही वेबसाईट <span class="village-name">[गावाचे नाव]</span> ग्रामपंचायतीतर्फे विकसित</p>
+                </div>
+                <div class="footer-links">
+                    <h3>उपयुक्त दुवे</h3>
+                    <ul>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">वापराच्या अटी</a></li>
+                        <li><a href="#">नागरिक तक्रार</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>संपर्क</h3>
+                    <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                    <p>तालुका: चांदवड, जिल्हा: नाशिक</p>
+                    <p>फोन: [फोन नंबर]</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; २०२५ स्मार्ट <span class="village-name">[गावाचे नाव]</span>. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

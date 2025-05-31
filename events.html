@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट गाव - आगामी कार्यक्रम</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Marathi+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- हेडर सेक्शन येथे सुरु -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h1>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="मेनू उघडा">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                    <li><a href="religious.html">धार्मिक स्थळे</a></li>
+                    <li><a href="places.html">महत्त्वाची ठिकाणे</a></li>
+                    <li><a href="events.html" class="active">कार्यक्रम</a></li>
+                    <li><a href="news.html">बातम्या व सूचना</a></li>
+                    <li><a href="businesses.html">स्थानिक व्यावसायिक</a></li>
+                    <li><a href="contact.html">संपर्क</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- पेज शीर्षक सेक्शन येथे सुरु -->
+    <section class="page-title">
+        <div class="container">
+            <h1>आगामी कार्यक्रम</h1>
+            <p>आमच्या गावात होणाऱ्या आगामी कार्यक्रमांची माहिती</p>
+        </div>
+    </section>
+
+    <!-- कार्यक्रम फिल्टर सेक्शन येथे सुरु -->
+    <section class="events-filter">
+        <div class="container">
+            <div class="filter-section">
+                <h3>कार्यक्रम शोधा</h3>
+                <div class="search-filter">
+                    <input type="text" id="event-search" placeholder="कार्यक्रमाचे नाव शोधा..." class="search-input">
+                    <div class="date-filter">
+                        <label for="event-month">महिना:</label>
+                        <select id="event-month" class="filter-select">
+                            <option value="all">सर्व</option>
+                            <option value="1">जानेवारी</option>
+                            <option value="2">फेब्रुवारी</option>
+                            <option value="3">मार्च</option>
+                            <option value="4">एप्रिल</option>
+                            <option value="5">मे</option>
+                            <option value="6">जून</option>
+                            <option value="7">जुलै</option>
+                            <option value="8">ऑगस्ट</option>
+                            <option value="9">सप्टेंबर</option>
+                            <option value="10">ऑक्टोबर</option>
+                            <option value="11">नोव्हेंबर</option>
+                            <option value="12">डिसेंबर</option>
+                        </select>
+                    </div>
+                    <div class="category-filter">
+                        <label for="event-category">प्रकार:</label>
+                        <select id="event-category" class="filter-select">
+                            <option value="all">सर्व</option>
+                            <option value="cultural">सांस्कृतिक</option>
+                            <option value="religious">धार्मिक</option>
+                            <option value="sports">क्रीडा</option>
+                            <option value="health">आरोग्य</option>
+                            <option value="education">शैक्षणिक</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- कार्यक्रम यादी सेक्शन येथे सुरु -->
+    <section class="events-list">
+        <div class="container">
+            <div class="events">
+                <!-- कार्यक्रम १ -->
+                <div class="event-card" data-category="cultural" data-month="6">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="date-day">१५</span>
+                            <span class="date-month">जून</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>गावाचा वार्षिक सांस्कृतिक महोत्सव</h3>
+                        <div class="event-meta">
+                            <p><strong>वेळ:</strong> सकाळी १०:०० ते रात्री ९:००</p>
+                            <p><strong>ठिकाण:</strong> ग्रामीण सभागृह</p>
+                            <p><strong>प्रकार:</strong> सांस्कृतिक</p>
+                        </div>
+                        <p class="event-description">या कार्यक्रमात स्थानिक कलाकारांचे नृत्य, गायन आणि नाटक सादरीकरण होईल. तसेच पारंपारिक खेळ आणि हस्तकला प्रदर्शन असेल.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="event1-more">अधिक माहिती</button>
+                        <div class="more-info" id="event1-more">
+                            <p>या कार्यक्रमात सहभागी होण्यासाठी आधी नोंदणी करणे आवश्यक आहे. नोंदणीसाठी ग्रामपंचायत कार्यालयात संपर्क साधावा. कार्यक्रमात विविध स्पर्धा आणि बक्षिसे देखील असतील. स्थानिक पदार्थांचे स्टॉल लावले जातील. सर्व ग्रामस्थांना निमंत्रित करण्यात येत आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- कार्यक्रम २ -->
+                <div class="event-card" data-category="health" data-month="6">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="date-day">२०</span>
+                            <span class="date-month">जून</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>निःशुल्क आरोग्य तपासणी शिबिर</h3>
+                        <div class="event-meta">
+                            <p><strong>वेळ:</strong> सकाळी ९:०० ते दुपारी २:००</p>
+                            <p><strong>ठिकाण:</strong> प्राथमिक आरोग्य केंद्र</p>
+                            <p><strong>प्रकार:</strong> आरोग्य</p>
+                        </div>
+                        <p class="event-description">या शिबिरात सर्व ग्रामस्थांची निःशुल्क आरोग्य तपासणी केली जाईल. विशेषतः रक्तदाब, मधुमेह आणि नेत्र तपासणी केली जाईल.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="event2-more">अधिक माहिती</button>
+                        <div class="more-info" id="event2-more">
+                            <p>या शिबिरात जिल्हा रुग्णालयातील तज्ञ डॉक्टर उपस्थित राहतील. आरोग्य तपासणीसोबत मोफत औषधे देखील दिली जातील. आपल्या आरोग्य कार्डसह उपस्थित राहावे. गरोदर महिला आणि ६० वर्षांवरील नागरिकांना प्राधान्य दिले जाईल.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- कार्यक्रम ३ -->
+                <div class="event-card" data-category="religious" data-month="7">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="date-day">५</span>
+                            <span class="date-month">जुलै</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>गावाची वार्षिक यात्रा</h3>
+                        <div class="event-meta">
+                            <p><strong>वेळ:</strong> सकाळी ६:०० पासून</p>
+                            <p><strong>ठिकाण:</strong> श्री गणेश मंदिर परिसर</p>
+                            <p><strong>प्रकार:</strong> धार्मिक</p>
+                        </div>
+                        <p class="event-description">गावाची वार्षिक यात्रा पारंपारिक पद्धतीने साजरी केली जाईल. सकाळी मिरवणूक आणि दिवसभर विविध धार्मिक कार्यक्रम होतील.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="event3-more">अधिक माहिती</button>
+                        <div class="more-info" id="event3-more">
+                            <p>या यात्रेत आसपासच्या गावातून भाविक येतात. मिरवणुकीनंतर भंडारा आयोजित केला जाईल. संध्याकाळी भजन-कीर्तन कार्यक्रम होईल. यात्रेत विविध स्टॉल लावले जातील. सर्व भाविकांना सहभागी होण्याचे आवाहन करण्यात येत आहे.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- कार्यक्रम ४ -->
+                <div class="event-card" data-category="education" data-month="7">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="date-day">१५</span>
+                            <span class="date-month">जुलै</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>शेतकरी प्रशिक्षण कार्यशाळा</h3>
+                        <div class="event-meta">
+                            <p><strong>वेळ:</strong> सकाळी ११:०० ते संध्याकाळी ४:००</p>
+                            <p><strong>ठिकाण:</strong> ग्रामीण सभागृह</p>
+                            <p><strong>प्रकार:</strong> शैक्षणिक</p>
+                        </div>
+                        <p class="event-description">या कार्यशाळेत आधुनिक शेती तंत्रज्ञान, जैविक शेती आणि सिंचन पद्धती यावर प्रशिक्षण दिले जाईल.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="event4-more">अधिक माहिती</button>
+                        <div class="more-info" id="event4-more">
+                            <p>या कार्यशाळेत कृषी विद्यापीठातील तज्ञ मार्गदर्शन करतील. सहभागींना प्रशिक्षण साहित्य आणि दुपारचे जेवण मोफत दिले जाईल. सहभागी होण्यासाठी आधी नोंदणी करणे आवश्यक आहे. नोंदणीसाठी ग्रामसेवकाशी संपर्क साधावा.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- कार्यक्रम ५ -->
+                <div class="event-card" data-category="sports" data-month="8">
+                    <div class="event-date">
+                        <div class="date-box">
+                            <span class="date-day">१०</span>
+                            <span class="date-month">ऑगस्ट</span>
+                        </div>
+                    </div>
+                    <div class="event-details">
+                        <h3>ग्रामीण क्रीडा स्पर्धा</h3>
+                        <div class="event-meta">
+                            <p><strong>वेळ:</strong> सकाळी ८:०० ते संध्याकाळी ६:००</p>
+                            <p><strong>ठिकाण:</strong> गावाचे क्रीडांगण</p>
+                            <p><strong>प्रकार:</strong> क्रीडा</p>
+                        </div>
+                        <p class="event-description">या स्पर्धेत कबड्डी, खो-खो, लंगडी आणि अन्य पारंपारिक खेळांचे आयोजन केले जाईल. विविध वयोगटांसाठी वेगवेगळ्या स्पर्धा असतील.</p>
+                        <button class="btn secondary-btn toggle-more-info" data-target="event5-more">अधिक माहिती</button>
+                        <div class="more-info" id="event5-more">
+                            <p>या स्पर्धेत सहभागी होण्यासाठी ५ ऑगस्ट पर्यंत नोंदणी करावी. विजेत्यांना आकर्षक बक्षिसे दिली जातील. सर्व वयोगटांसाठी वेगवेगळ्या स्पर्धा असतील. प्रेक्षकांसाठी बसण्याची व्यवस्था केली जाईल. स्पर्धेदरम्यान अल्पोपहार उपलब्ध असेल.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- फूटर सेक्शन येथे सुरु -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>स्मार्ट <span class="village-name">[गावाचे नाव]</span></h2>
+                    <p>ही वेबसाईट <span class="village-name">[गावाचे नाव]</span> ग्रामपंचायतीतर्फे विकसित</p>
+                </div>
+                <div class="footer-links">
+                    <h3>उपयुक्त दुवे</h3>
+                    <ul>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">वापराच्या अटी</a></li>
+                        <li><a href="#">नागरिक तक्रार</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>संपर्क</h3>
+                    <p>ग्रामपंचायत कार्यालय, <span class="village-name">[गावाचे नाव]</span></p>
+                    <p>तालुका: चांदवड, जिल्हा: नाशिक</p>
+                    <p>फोन: [फोन नंबर]</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; २०२५ स्मार्ट <span class="village-name">[गावाचे नाव]</span>. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
