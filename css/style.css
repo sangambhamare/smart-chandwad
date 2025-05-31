@@ -1,0 +1,1266 @@
+/* 
+==============================================
+स्मार्ट गाव वेबसाईट स्टाईल शीट
+==============================================
+*/
+
+/* 
+------------------------------------------
+मूलभूत सेटिंग्ज
+------------------------------------------
+*/
+:root {
+    /* रंग परिभाषा */
+    --primary-color: #e05d26; /* गेरू */
+    --secondary-color: #1e7145; /* हिरवा */
+    --accent-color: #2a6b96; /* निळसर */
+    --light-color: #ffffff; /* पांढरा */
+    --dark-color: #333333; /* काळसर */
+    --light-bg: #f8f8f8; /* हलका पांढरा */
+    --medium-bg: #f0f0f0; /* मध्यम पांढरा */
+    --border-color: #dddddd; /* सीमा रंग */
+    --success-color: #28a745; /* यशस्वी रंग */
+    --warning-color: #ffc107; /* चेतावणी रंग */
+    --error-color: #dc3545; /* त्रुटी रंग */
+    
+    /* फॉन्ट साईज */
+    --font-xs: 0.75rem; /* 12px */
+    --font-sm: 0.875rem; /* 14px */
+    --font-base: 1rem; /* 16px */
+    --font-md: 1.125rem; /* 18px */
+    --font-lg: 1.25rem; /* 20px */
+    --font-xl: 1.5rem; /* 24px */
+    --font-2xl: 1.875rem; /* 30px */
+    --font-3xl: 2.25rem; /* 36px */
+    
+    /* स्पेसिंग */
+    --spacing-xs: 0.25rem; /* 4px */
+    --spacing-sm: 0.5rem; /* 8px */
+    --spacing-md: 1rem; /* 16px */
+    --spacing-lg: 1.5rem; /* 24px */
+    --spacing-xl: 2rem; /* 32px */
+    --spacing-2xl: 3rem; /* 48px */
+    
+    /* बॉर्डर रेडियस */
+    --radius-sm: 0.25rem; /* 4px */
+    --radius-md: 0.5rem; /* 8px */
+    --radius-lg: 1rem; /* 16px */
+    --radius-full: 9999px;
+    
+    /* शॅडो */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* ट्रांझिशन */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* कंटेनर */
+    --container-padding: 1rem;
+    --container-max-width: 1200px;
+}
+
+/* 
+------------------------------------------
+रीसेट आणि मूलभूत स्टाईल
+------------------------------------------
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Baloo Marathi 2', sans-serif;
+    color: var(--dark-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* 
+------------------------------------------
+उपयोगी क्लासेस
+------------------------------------------
+*/
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-align: center;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.primary-btn:hover {
+    background-color: #c94e1c;
+    color: var(--light-color);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.secondary-btn:hover {
+    background-color: #165c35;
+    color: var(--light-color);
+}
+
+.outline-btn {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.outline-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-size: var(--font-2xl);
+    color: var(--primary-color);
+    position: relative;
+}
+
+.icon-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+    margin-right: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+------------------------------------------
+हेडर आणि नेव्हिगेशन
+------------------------------------------
+*/
+.header {
+    background-color: var(--light-color);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--spacing-md) 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: var(--font-xl);
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.village-name {
+    color: var(--secondary-color);
+}
+
+.main-nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    position: relative;
+    transition: all var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: all var(--transition-fast);
+}
+
+.hamburger::before {
+    transform: translateY(-9px);
+}
+
+.hamburger::after {
+    transform: translateY(9px);
+}
+
+.menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    margin-left: var(--spacing-lg);
+}
+
+.nav-list a {
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: var(--spacing-sm) 0;
+    position: relative;
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-fast);
+}
+
+.nav-list a:hover::after,
+.nav-list a.active::after {
+    width: 100%;
+}
+
+.nav-list a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 
+------------------------------------------
+हीरो बॅनर
+------------------------------------------
+*/
+.hero-banner {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://source.unsplash.com/1600x900/?village,india');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-size: var(--font-3xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.banner-content p {
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 
+------------------------------------------
+न्यूज हायलाइट्स
+------------------------------------------
+*/
+.news-highlights {
+    padding: var(--spacing-2xl) 0;
+}
+
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.news-card {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.news-date {
+    color: var(--accent-color);
+    font-size: var(--font-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.news-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-lg);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* 
+------------------------------------------
+महत्वाच्या सूचना
+------------------------------------------
+*/
+.important-notices {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--medium-bg);
+}
+
+.notice-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.notice {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.notice-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--warning-color);
+    border-radius: var(--radius-full);
+    margin-right: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+.notice-content h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-md);
+}
+
+/* 
+------------------------------------------
+द्रुत दुवे
+------------------------------------------
+*/
+.quick-links {
+    padding: var(--spacing-2xl) 0;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    color: var(--primary-color);
+}
+
+.link-card .icon-placeholder {
+    margin-bottom: var(--spacing-md);
+    margin-right: 0;
+}
+
+.link-card h3 {
+    color: var(--dark-color);
+    font-size: var(--font-md);
+}
+
+/* 
+------------------------------------------
+पेज शीर्षक
+------------------------------------------
+*/
+.page-title {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: var(--font-2xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-title p {
+    font-size: var(--font-md);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 
+------------------------------------------
+धार्मिक स्थळे
+------------------------------------------
+*/
+.religious-places {
+    padding: var(--spacing-2xl) 0;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+.place-card {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.place-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.place-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.place-card:hover .place-image img {
+    transform: scale(1.05);
+}
+
+.place-content {
+    padding: var(--spacing-lg);
+}
+
+.place-content h3 {
+    color: var(--primary-color);
+    font-size: var(--font-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.place-details {
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-color);
+}
+
+.place-description {
+    margin-bottom: var(--spacing-md);
+}
+
+.more-info {
+    display: none;
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+/* 
+------------------------------------------
+महत्त्वाची ठिकाणे
+------------------------------------------
+*/
+.important-places {
+    padding: var(--spacing-2xl) 0;
+}
+
+.filter-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--medium-bg);
+    border-radius: var(--radius-full);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* 
+------------------------------------------
+कार्यक्रम
+------------------------------------------
+*/
+.events-filter {
+    padding: var(--spacing-xl) 0 0;
+}
+
+.search-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.date-filter,
+.category-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.filter-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--light-color);
+}
+
+.events-list {
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.events {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+.event-card {
+    display: flex;
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: var(--spacing-md);
+    min-width: 100px;
+    text-align: center;
+}
+
+.date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-day {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.date-month {
+    font-size: var(--font-md);
+    margin-top: var(--spacing-xs);
+}
+
+.event-details {
+    padding: var(--spacing-lg);
+    flex: 1;
+}
+
+.event-details h3 {
+    color: var(--primary-color);
+    font-size: var(--font-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-color);
+}
+
+/* 
+------------------------------------------
+बातम्या व सूचना
+------------------------------------------
+*/
+.news-filter {
+    padding: var(--spacing-xl) 0 0;
+}
+
+.news-section {
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.news-tile {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.news-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.news-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.news-tile:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-content {
+    padding: var(--spacing-lg);
+}
+
+.news-content h3 {
+    color: var(--primary-color);
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.notices-section {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--medium-bg);
+}
+
+/* 
+------------------------------------------
+स्थानिक व्यावसायिक
+------------------------------------------
+*/
+.business-filter {
+    padding: var(--spacing-xl) 0 0;
+}
+
+.business-list {
+    padding: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.business-card {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.business-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.business-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.business-card:hover .business-image img {
+    transform: scale(1.05);
+}
+
+.business-content {
+    padding: var(--spacing-lg);
+}
+
+.business-content h3 {
+    color: var(--primary-color);
+    font-size: var(--font-lg);
+    margin-bottom: var(--spacing-sm);
+}
+
+.business-meta,
+.business-contact {
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-color);
+}
+
+.business-timing {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.business-map {
+    margin-top: var(--spacing-md);
+}
+
+.map-link {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.business-register {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--medium-bg);
+    text-align: center;
+}
+
+.register-info {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* 
+------------------------------------------
+संपर्क
+------------------------------------------
+*/
+.contact-info {
+    padding: var(--spacing-2xl) 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+.contact-card {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-item {
+    display: flex;
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: var(--radius-full);
+    margin-right: var(--spacing-md);
+    flex-shrink: 0;
+}
+
+.contact-text h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-md);
+}
+
+.map-container {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    height: 300px;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--medium-bg);
+    color: var(--dark-color);
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.contact-form {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--medium-bg);
+}
+
+.form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 500;
+}
+
+.required {
+    color: var(--error-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--light-bg);
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.important-contacts {
+    padding: var(--spacing-2xl) 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.contact-emergency-card {
+    background-color: var(--light-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.emergency-icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--error-color);
+    border-radius: var(--radius-full);
+    margin: 0 auto var(--spacing-md);
+}
+
+.contact-emergency-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-md);
+}
+
+/* 
+------------------------------------------
+फूटर
+------------------------------------------
+*/
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-logo h2 {
+    color: var(--light-color);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-xl);
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-lg);
+}
+
+.footer-links ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-links ul li a {
+    color: var(--light-color);
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+
+.footer-links ul li a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.footer-contact p {
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.8;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.6;
+    font-size: var(--font-sm);
+}
+
+/* 
+------------------------------------------
+रेस्पॉन्सिव्ह डिझाईन
+------------------------------------------
+*/
+@media (min-width: 768px) {
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .place-card {
+        flex-direction: row;
+    }
+    
+    .place-image {
+        width: 40%;
+        height: auto;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 991px) {
+    .banner-content h2 {
+        font-size: var(--font-2xl);
+    }
+    
+    .banner-content p {
+        font-size: var(--font-md);
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-xl);
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--light-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 80px var(--spacing-lg) var(--spacing-lg);
+        box-shadow: var(--shadow-lg);
+        transition: right var(--transition-normal);
+        z-index: 5;
+    }
+    
+    .nav-list.active {
+        right: 0;
+    }
+    
+    .nav-list li {
+        margin: var(--spacing-sm) 0;
+        width: 100%;
+    }
+    
+    .nav-list a {
+        display: block;
+        padding: var(--spacing-sm);
+        width: 100%;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-date {
+        padding: var(--spacing-md);
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .date-box {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .date-day {
+        margin-right: var(--spacing-sm);
+    }
+    
+    .place-card {
+        flex-direction: column;
+    }
+    
+    .place-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .date-filter,
+    .category-filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+}
+
+/* 
+------------------------------------------
+अॅनिमेशन आणि इफेक्ट्स
+------------------------------------------
+*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* लेझी लोडिंग इमेजेस */
+.lazy-image {
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.lazy-image.loaded {
+    opacity: 1;
+}
+
+/* मोर इन्फो टॉगल */
+.more-info.active {
+    display: block;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+/* ओव्हरले इफेक्ट */
+.overlay-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.overlay-effect:hover::after {
+    opacity: 1;
+}
